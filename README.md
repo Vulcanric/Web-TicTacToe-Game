@@ -2,7 +2,7 @@
 
 Welcome to **African Tic Tac Toe** – a web-based Tic Tac Toe game with a unique twist! This is no ordinary game; it's an **African-made** project where you can challenge your friends, or if you're feeling brave, take on **Kalaba**, the formidable witch from the **Kirikou and the Sorceress (1998)** anime. 🌟
 
-![Tic Tac Toe Banner](https://your-image-link-here.com/banner.png) <!-- Replace with your actual image link -->
+![Tic Tac Toe Banner](https://as1.ftcdn.net/v2/jpg/05/96/52/22/1000_F_596522285_tKM9qxfXK5x5bHTGcgIMM5ugWwAIhOiJ.jpg) <!-- Replace with your actual image link -->
 
 ## 🔥 Features
 
