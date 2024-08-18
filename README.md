@@ -8,7 +8,7 @@ Welcome to **African Tic Tac Toe** – a web-based Tic Tac Toe game with a uniqu
 
 - **🔐 Authentication:** Secure login to keep track of your victories and defeats!
 - **👥 Multiplayer Mode:** Challenge your friends and prove who's the ultimate Tic Tac Toe champion!
-- **🤖 Play with Kalaba:** Think you can outsmart a witch? Try playing against **Kalaba** from the [Kirikou and the Sorceress (1998)](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJdl7C76qSYp4YKrmsHUhPubyF10sFeq8r2A&s) anime and see if you can win! 
+- **🤖 Play with Kalaba:** Think you can outsmart a witch? Try playing against **Kalaba** from the [Kirikou and the Sorceress (1998)](https://youtu.be/FOXIXbq0bRc) anime and see if you can win! 
 - **🌍 African Made:** Proudly crafted with love and African creativity, blending traditional games with modern technology.
 
 ## 🛠️ Technologies
