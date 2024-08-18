@@ -1,7 +1,3 @@
-Here's the updated README with the project structure included:
-
----
-
 # 🌍 African Tic Tac Toe 🎮
 
 Welcome to **African Tic Tac Toe** – a web-based Tic Tac Toe game with a unique twist! This is no ordinary game; it's an **African-made** project where you can challenge your friends, or if you're feeling brave, take on **Kalaba**, the formidable witch from the **Kirikou and the Sorceress (1998)** anime. 🌟
