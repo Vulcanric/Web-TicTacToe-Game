@@ -1,4 +1,4 @@
-Here's the updated README with the contributors section added:
+Here's the updated README with the project structure included:
 
 ---
 
@@ -20,25 +20,9 @@ Welcome to **African Tic Tac Toe** – a web-based Tic Tac Toe game with a uniqu
 - **Frontend:** HTML, CSS, JavaScript 🎨
 - **Backend:** Python, Flask 🐍
 
-## 🎯 How to Play
+## 🗂️ Project Structure
 
-1. **Sign Up or Log In** to start your journey.
-2. Choose to **play with a friend** or take on **Kalaba**.
-3. Make your move and enjoy the game! May the best player win!
-
-![Gameplay Screenshot](https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQdR5hPxiKG7MuJFuIe1lbrqandKE2QP5JzdrE4Dt6gnzu6Xnc0dCyK97yTeghVzkok)
-
-## 🖌️ Design Inspiration
-
-Our design is inspired by African art and culture, with vibrant colors and patterns that make the game both visually appealing and culturally enriching.
-
-## 📈 Project Status
-
-We're actively developing this game as part of a school competition, and your feedback is invaluable! Feel free to try it out and let us know what you think.
-
-
-## Project Structure(proposed one)
-
+```plaintext
 tic_tac_toe/
 │
 ├── app.py                    # Main application file
@@ -71,6 +55,23 @@ tic_tac_toe/
 └── tests/                    # Unit tests for the application
     ├── __init__.py           # Initialize the tests package
     └── test_routes.py        # Test cases for routes
+```
+
+## 🎯 How to Play
+
+1. **Sign Up or Log In** to start your journey.
+2. Choose to **play with a friend** or take on **Kalaba**.
+3. Make your move and enjoy the game! May the best player win!
+
+![Gameplay Screenshot](https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQdR5hPxiKG7MuJFuIe1lbrqandKE2QP5JzdrE4Dt6gnzu6Xnc0dCyK97yTeghVzkok)
+
+## 🖌️ Design Inspiration
+
+Our design is inspired by African art and culture, with vibrant colors and patterns that make the game both visually appealing and culturally enriching.
+
+## 📈 Project Status
+
+We're actively developing this game as part of a school competition, and your feedback is invaluable! Feel free to try it out and let us know what you think.
 
 ## 🤝 Contributing
 
@@ -100,4 +101,5 @@ If you like this project, don't forget to give it a ⭐ and share it with your f
 ---
 
 **ALX Africa**
-!
+
+---
