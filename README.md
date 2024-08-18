@@ -1,14 +1,18 @@
+Here's the updated README with the contributors section added:
+
+---
+
 # 🌍 African Tic Tac Toe 🎮
 
 Welcome to **African Tic Tac Toe** – a web-based Tic Tac Toe game with a unique twist! This is no ordinary game; it's an **African-made** project where you can challenge your friends, or if you're feeling brave, take on **Kalaba**, the formidable witch from the **Kirikou and the Sorceress (1998)** anime. 🌟
 
-![Tic Tac Toe Banner](https://as1.ftcdn.net/v2/jpg/05/96/52/22/1000_F_596522285_tKM9qxfXK5x5bHTGcgIMM5ugWwAIhOiJ.jpg) <!-- Replace with your actual image link -->
+![Tic Tac Toe Banner](https://as1.ftcdn.net/v2/jpg/05/96/52/22/1000_F_596522285_tKM9qxfXK5x5bHTGcgIMM5ugWwAIhOiJ.jpg)
 
 ## 🔥 Features
 
 - **🔐 Authentication:** Secure login to keep track of your victories and defeats!
 - **👥 Multiplayer Mode:** Challenge your friends and prove who's the ultimate Tic Tac Toe champion!
-- **🤖 Play with Kalaba:** Think you can outsmart a witch? Try playing against **Kalaba** from the [Kirikou and the Sorceress (1998)](https://youtu.be/FOXIXbq0bRc) anime and see if you can win! 
+- **🤖 Play with Kalaba:** Think you can outsmart a witch? Try playing against **Kalaba** from the [Kirikou and the Sorceress (1998)](https://youtu.be/FOXIXbq0bRc) anime and see if you can win!
 - **🌍 African Made:** Proudly crafted with love and African creativity, blending traditional games with modern technology.
 
 ## 🛠️ Technologies
@@ -22,7 +26,7 @@ Welcome to **African Tic Tac Toe** – a web-based Tic Tac Toe game with a uniqu
 2. Choose to **play with a friend** or take on **Kalaba**.
 3. Make your move and enjoy the game! May the best player win!
 
-![Gameplay Screenshot](https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQdR5hPxiKG7MuJFuIe1lbrqandKE2QP5JzdrE4Dt6gnzu6Xnc0dCyK97yTeghVzkok) >
+![Gameplay Screenshot](https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQdR5hPxiKG7MuJFuIe1lbrqandKE2QP5JzdrE4Dt6gnzu6Xnc0dCyK97yTeghVzkok)
 
 ## 🖌️ Design Inspiration
 
@@ -40,6 +44,24 @@ Interested in contributing to the project? Fork this repo and submit a pull requ
 
 If you like this project, don't forget to give it a ⭐ and share it with your friends!
 
+## 👥 Contributors
+
+- **Elijah Frempong**  
+  - Email: [elijahfrimpong76@gmail.com](mailto:elijahfrimpong76@gmail.com)  
+  - Cohort: 22  
+  - Discord: efrempong2
+
+- **Mokhtar Ramadan**  
+  - Email: [mokhtarramdanformal@gmail.com](mailto:mokhtarramdanformal@gmail.com)  
+  - Cohort: 18  
+  - Discord: mokmoa
+
+- **John Eric**  
+  - Email: [jneric49@gmail.com](mailto:jneric49@gmail.com)  
+  - Cohort: 19  
+  - Discord: @vulcanric
+
 ---
 
-ALX africa
+**ALX Africa**
+!
