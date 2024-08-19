@@ -9,12 +9,13 @@ Welcome to **African Tic Tac Toe** – a web-based Tic Tac Toe game with a uniqu
 - **🔐 Authentication:** Secure login to keep track of your victories and defeats!
 - **👥 Multiplayer Mode:** Challenge your friends and prove who's the ultimate Tic Tac Toe champion!
 - **🤖 Play with Kalaba:** Think you can outsmart a witch? Try playing against **Kalaba** from the [Kirikou and the Sorceress (1998)](https://youtu.be/FOXIXbq0bRc) anime and see if you can win!
+- **🌐 Play Online:** Play online with a vast amount of individuals from diverse nationalities competing for leadership.
 - **🌍 African Made:** Proudly crafted with love and African creativity, blending traditional games with modern technology.
 
 ## 🛠️ Technologies
 
 - **Frontend:** HTML, CSS, JavaScript 🎨
-- **Backend:** Python, Flask 🐍
+- **Backend:** Python, Flask 🐍, SQLite Db
 
 ## 🗂️ Project Structure
 
@@ -79,20 +80,35 @@ If you like this project, don't forget to give it a ⭐ and share it with your f
 
 ## 👥 Contributors
 
-- **Elijah Frempong**  
-  - Email: [elijahfrimpong76@gmail.com](mailto:elijahfrimpong76@gmail.com)  
-  - Cohort: 22  
-  - Discord: efrempong2
+- **Cappy Alemayehu (Team Leader)**
+  - Email: [cappyalemayehu12@gmail.com](mailto:cappyalemayehu12@gmail.com)
+  - Cohort: 21
+  - Discord: cappu123
 
-- **Mokhtar Ramadan**  
-  - Email: [mokhtarramdanformal@gmail.com](mailto:mokhtarramdanformal@gmail.com)  
-  - Cohort: 18  
+- **Alex Kinyanjui**
+  - Email: [alexkinyanjui356@gmail.com](mailto:alexkinyanjui356@gmail.com)
+  - Cohort: C2-blended
+  - Discord: iam_alexx
+
+- **John Eric**
+  - Email: [jneric49@gmail.com](mailto:jneric49@gmail.com)
+  - Cohort: 19
+  - Discord: vulcanric
+
+- **Rugwiro Parfait**
+  - Email: [rugwiroparfait003@gmail.com](mailto:rugwiroparfait003@gmail.com)
+  - Cohort: 21
+  - Discord: rugwiro_parfait
+
+- **Mokhtar Ramadan**
+  - Email: [mokhtarramdanformal@gmail.com](mailto:mokhtarramdanformal@gmail.com)
+  - Cohort: 18
   - Discord: mokmoa
 
-- **John Eric**  
-  - Email: [jneric49@gmail.com](mailto:jneric49@gmail.com)  
-  - Cohort: 19  
-  - Discord: @vulcanric
+- **Elijah Frempong**
+  - Email: [elijahfrimpong76@gmail.com](mailto:elijahfrimpong76@gmail.com)
+  - Cohort: 22
+  - Discord: efrempong2
 
 ---
 
