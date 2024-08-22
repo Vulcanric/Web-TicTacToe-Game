@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe with Karaba</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #343a40;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #f8f9fa;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #495057;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #ffc107;
+        }
+
+        #game-board {
+            display: inline-block;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #adb5bd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            cursor: pointer;
+            background-color: #6c757d;
+            transition: background-color 0.3s ease;
+        }
+
+        .square:hover {
+            background-color: #868e96;
+        }
+
+        .square:active {
+            background-color: #495057;
+        }
+
+        #status {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #f8f9fa;
+        }
+
+        .modal-content {
+            background-color: #495057;
+            color: #000; /* Text color set to black */
+        }
+
+        .modal-header, .modal-footer {
+            border: none; /* Remove default border for a cleaner look */
+        }
+
+        .modal-body {
+            text-align: center; /* Center the text */
+        }
+
+        .result-message {
+            font-size: 1.5rem; /* Larger text for the result message */
+            font-weight: bold;
+            color: #000; /* Set text color to black */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4">Tic Tac Toe</h1>
+        <div id="game-board">
+            <div class="row">
+                <div class="square col border" data-index="0"></div>
+                <div class="square col border" data-index="1"></div>
+                <div class="square col border" data-index="2"></div>
+            </div>
+            <div class="row">
+                <div class="square col border" data-index="3"></div>
+                <div class="square col border" data-index="4"></div>
+                <div class="square col border" data-index="5"></div>
+            </div>
+            <div class="row">
+                <div class="square col border" data-index="6"></div>
+                <div class="square col border" data-index="7"></div>
+                <div class="square col border" data-index="8"></div>
+            </div>
+        </div>
+        <div id="status" class="mt-3 text-muted"></div>
+        <button id="reset-button" class="btn btn-warning mt-3" style="display:none;">Reset Game</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resultModalLabel">Game Over</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="resultMessage" class="result-message"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="modal-reset-button" data-bs-dismiss="modal">Play Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const squares = document.querySelectorAll('.square');
+            const statusDiv = document.getElementById('status');
+            const resetButton = document.getElementById('reset-button');
+            const resultModal = new bootstrap.Modal(document.getElementById('resultModal'));
+            const resultMessage = document.getElementById('resultMessage');
+            const modalResetButton = document.getElementById('modal-reset-button');
+        
+            squares.forEach(square => {
+                square.addEventListener('click', handlePlayerMove);
+            });
+        
+            resetButton.addEventListener('click', resetGame);
+            modalResetButton.addEventListener('click', resetGame);
+        
+            function handlePlayerMove(event) {
+                const square = event.target;
+                const index = square.getAttribute('data-index');
+        
+                if (square.textContent !== '') return;
+        
+                makeMove(index, 'X');
+            }
+        
+            function makeMove(index, player) {
+                fetch('/play-ai', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ move: index }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        statusDiv.textContent = data.error;
+                        return;
+                    }
+        
+                    document.querySelector(`.square[data-index="${index}"]`).textContent = player;
+        
+                    if (data.winner) {
+                        statusDiv.textContent = data.winner === 'X' ? 'You won!' : 'Karaba won!';
+                        resultMessage.textContent = data.winner === 'X' ? 'Congratulations, you won!' : 'Karaba won! Better luck next time.';
+                        showEndGame();
+                        return;
+                    }
+        
+                    if (data.draw) {
+                        statusDiv.textContent = 'It\'s a draw!';
+                        resultMessage.textContent = 'It\'s a draw!';
+                        showEndGame();
+                        return;
+                    }
+        
+                    if (data.ai_move !== undefined) {
+                        // Delay for AI move
+                        setTimeout(() => {
+                            document.querySelector(`.square[data-index="${data.ai_move}"]`).textContent = 'O';
+        
+                            if (data.winner === 'O') {
+                                statusDiv.textContent = 'Karaba won!';
+                                resultMessage.textContent = 'Karaba won! Better luck next time.';
+                                showEndGame();
+                            }
+                        }, 3000); // 3 seconds delay
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+        
+            function showEndGame() {
+                disableBoard();
+                resultModal.show();
+                resetButton.style.display = 'block';
+            }
+        
+            function disableBoard() {
+                squares.forEach(square => {
+                    square.removeEventListener('click', handlePlayerMove);
+                });
+            }
+        
+            function resetGame() {
+                fetch('/reset', { method: 'POST' })
+                    .then(() => {
+                        squares.forEach(square => {
+                            square.textContent = '';
+                        });
+                        statusDiv.textContent = '';
+                        enableBoard();
+                        resetButton.style.display = 'none';
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        
+            function enableBoard() {
+                squares.forEach(square => {
+                    square.addEventListener('click', handlePlayerMove);
+                });
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>
