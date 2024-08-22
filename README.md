@@ -29,6 +29,10 @@ tic_tac_toe/
 │   │   ├── css/
 │   │   └── js/
 │   └── templates/
+├── tests/
+│   ├── __init__.py
+│   ├── test_routes.py
+│   ├── test_models.py
 ├── config.py
 ├── app.py
 └── requirements.txt
