@@ -21,37 +21,21 @@ Welcome to **African Tic Tac Toe** – a web-based Tic Tac Toe game with a uniqu
 
 ```plaintext
 tic_tac_toe/
-│
-├── app.py                    # Main application file
-├── config.py                 # Configuration settings (optional)
-├── tic_tac_toe.db            # SQLite database file
-├── requirements.txt          # List of dependencies
-├── README.md                 # Project documentation
-├── migrations/               # Database migration files (if using Flask-Migrate)
-│   └── ...
-│
-├── instance/                 # Instance folder for configurations and instance-specific files
-│   └── config.py             # Instance-specific configuration (if needed)
-│
-├── tic_tac_toe/              # Application package
-│   ├── __init__.py           # Initialize the Flask app and extensions
-│   ├── models.py             # Database models
-│   ├── routes.py             # Application routes (views)
-│   ├── forms.py              # Forms for authentication and other user input
-│   ├── static/               # Static files (CSS, JavaScript, images)
-│   │   ├── style.css         # Main stylesheet
-│   │   └── script.js         # Main JavaScript file for frontend logic
-│   └── templates/            # HTML templates
-│       ├── base.html         # Base template
-│       ├── index.html        # Main game page
-│       ├── register.html     # Registration page
-│       ├── login.html        # Login page
-│       ├── leaderboard.html  # Leaderboard page
-│       └── layout/           # Common layout files, if needed
-│
-└── tests/                    # Unit tests for the application
-    ├── __init__.py           # Initialize the tests package
-    └── test_routes.py        # Test cases for routes
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── models.py
+│   ├── static/
+│   │   ├── css/
+│   │   └── js/
+│   └── templates/
+├── tests/
+│   ├── __init__.py
+│   ├── test_routes.py
+│   ├── test_models.py
+├── config.py
+├── app.py
+└── requirements.txt
 ```
 
 ## 🎯 How to Play
